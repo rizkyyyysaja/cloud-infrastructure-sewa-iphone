@@ -1,0 +1,14 @@
+name: Deploy Tes Sewa iPhone
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Pull latest code on server
+        run: |
+          cd ~/cloud-infrastructure-sewa-iphone
+          git pull origin main
